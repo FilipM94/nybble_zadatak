@@ -1,0 +1,9 @@
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\bin\Debug\nybble_zadatak.exe.config
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\bin\Debug\nybble_zadatak.exe
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\bin\Debug\nybble_zadatak.pdb
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.csprojAssemblyReference.cache
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.Properties.Resources.resources
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.csproj.GenerateResource.cache
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.csproj.CoreCompileInputs.cache
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.exe
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.pdb
