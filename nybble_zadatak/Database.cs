@@ -126,7 +126,7 @@ namespace nybble_zadatak
             con.Close();
 
             con.Open();
-            query = "SELECT device_sensors.value, sensors.id, sensors.desc FROM device_sensors LEFT JOIN sensors ON device_sensors.sensor_id = sensors.id;";
+            query = "SELECT device_sensors.value, sensors.id, sensors.desc FROM device_sensors LEFT JOIN sensors ON device_sensors.sensor_id = sensors.id WHERE device_id=@device_id;";
             cmd = new MySqlCommand(query, con);
             cmd.Parameters.AddWithValue("@device_id", json_device.id);
             MySqlDataReader reader_sensor = cmd.ExecuteReader();
