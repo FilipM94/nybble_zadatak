@@ -39,6 +39,8 @@
             this.tb_sensor_temperature = new System.Windows.Forms.TextBox();
             this.cb_device_status = new System.Windows.Forms.ComboBox();
             this.save_button = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tb_phase_power = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -126,18 +128,37 @@
             // 
             // save_button
             // 
-            this.save_button.Location = new System.Drawing.Point(406, 275);
+            this.save_button.Location = new System.Drawing.Point(406, 307);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(75, 23);
             this.save_button.TabIndex = 10;
             this.save_button.Text = "Spremi";
             this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 274);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Potrošnja po fazi";
+            // 
+            // tb_phase_power
+            // 
+            this.tb_phase_power.Location = new System.Drawing.Point(130, 267);
+            this.tb_phase_power.Name = "tb_phase_power";
+            this.tb_phase_power.Size = new System.Drawing.Size(351, 20);
+            this.tb_phase_power.TabIndex = 12;
             // 
             // DeviceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 332);
+            this.ClientSize = new System.Drawing.Size(519, 342);
+            this.Controls.Add(this.tb_phase_power);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.cb_device_status);
             this.Controls.Add(this.tb_sensor_temperature);
@@ -169,5 +190,7 @@
         private System.Windows.Forms.TextBox tb_sensor_temperature;
         private System.Windows.Forms.ComboBox cb_device_status;
         private System.Windows.Forms.Button save_button;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tb_phase_power;
     }
 }

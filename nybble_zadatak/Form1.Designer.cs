@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_devices = new System.Windows.Forms.DataGridView();
             this.add_button = new System.Windows.Forms.Button();
             this.edit_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
@@ -41,16 +40,16 @@
             this.lb_sensors = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.phase_1 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.phase_2 = new System.Windows.Forms.RadioButton();
+            this.phase_3 = new System.Windows.Forms.RadioButton();
+            this.phase_4 = new System.Windows.Forms.RadioButton();
+            this.phase_5 = new System.Windows.Forms.RadioButton();
+            this.phase_6 = new System.Windows.Forms.RadioButton();
+            this.phase_7 = new System.Windows.Forms.RadioButton();
+            this.phase_8 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.lb_log = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_devices)).BeginInit();
+            this.lv_devices = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // label1
@@ -62,14 +61,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Uređaji";
             // 
-            // dgv_devices
-            // 
-            this.dgv_devices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_devices.Location = new System.Drawing.Point(12, 29);
-            this.dgv_devices.Name = "dgv_devices";
-            this.dgv_devices.Size = new System.Drawing.Size(655, 219);
-            this.dgv_devices.TabIndex = 1;
-            // 
             // add_button
             // 
             this.add_button.Location = new System.Drawing.Point(700, 29);
@@ -78,6 +69,7 @@
             this.add_button.TabIndex = 2;
             this.add_button.Text = "Dodaj";
             this.add_button.UseVisualStyleBackColor = true;
+            this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
             // edit_button
             // 
@@ -87,6 +79,7 @@
             this.edit_button.TabIndex = 3;
             this.edit_button.Text = "Uredi";
             this.edit_button.UseVisualStyleBackColor = true;
+            this.edit_button.Click += new System.EventHandler(this.edit_button_Click);
             // 
             // delete_button
             // 
@@ -96,6 +89,7 @@
             this.delete_button.TabIndex = 4;
             this.delete_button.Text = "Ukloni";
             this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
             // status_button
             // 
@@ -105,6 +99,7 @@
             this.status_button.TabIndex = 5;
             this.status_button.Text = "Status";
             this.status_button.UseVisualStyleBackColor = true;
+            this.status_button.Click += new System.EventHandler(this.status_button_Click);
             // 
             // config_button
             // 
@@ -114,6 +109,7 @@
             this.config_button.TabIndex = 6;
             this.config_button.Text = "Config";
             this.config_button.UseVisualStyleBackColor = true;
+            this.config_button.Click += new System.EventHandler(this.config_button_Click);
             // 
             // label2
             // 
@@ -169,82 +165,82 @@
             this.phase_1.TabStop = true;
             this.phase_1.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // phase_2
             // 
-            this.radioButton1.AutoCheck = false;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(29, 508);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 13;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.phase_2.AutoCheck = false;
+            this.phase_2.AutoSize = true;
+            this.phase_2.Location = new System.Drawing.Point(29, 508);
+            this.phase_2.Name = "phase_2";
+            this.phase_2.Size = new System.Drawing.Size(14, 13);
+            this.phase_2.TabIndex = 13;
+            this.phase_2.TabStop = true;
+            this.phase_2.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // phase_3
             // 
-            this.radioButton2.AutoCheck = false;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(49, 508);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.phase_3.AutoCheck = false;
+            this.phase_3.AutoSize = true;
+            this.phase_3.Location = new System.Drawing.Point(49, 508);
+            this.phase_3.Name = "phase_3";
+            this.phase_3.Size = new System.Drawing.Size(14, 13);
+            this.phase_3.TabIndex = 14;
+            this.phase_3.TabStop = true;
+            this.phase_3.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // phase_4
             // 
-            this.radioButton3.AutoCheck = false;
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(69, 508);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3.TabIndex = 15;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.phase_4.AutoCheck = false;
+            this.phase_4.AutoSize = true;
+            this.phase_4.Location = new System.Drawing.Point(69, 508);
+            this.phase_4.Name = "phase_4";
+            this.phase_4.Size = new System.Drawing.Size(14, 13);
+            this.phase_4.TabIndex = 15;
+            this.phase_4.TabStop = true;
+            this.phase_4.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // phase_5
             // 
-            this.radioButton4.AutoCheck = false;
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(89, 508);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(14, 13);
-            this.radioButton4.TabIndex = 16;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.phase_5.AutoCheck = false;
+            this.phase_5.AutoSize = true;
+            this.phase_5.Location = new System.Drawing.Point(89, 508);
+            this.phase_5.Name = "phase_5";
+            this.phase_5.Size = new System.Drawing.Size(14, 13);
+            this.phase_5.TabIndex = 16;
+            this.phase_5.TabStop = true;
+            this.phase_5.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // phase_6
             // 
-            this.radioButton5.AutoCheck = false;
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(109, 508);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(14, 13);
-            this.radioButton5.TabIndex = 17;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.phase_6.AutoCheck = false;
+            this.phase_6.AutoSize = true;
+            this.phase_6.Location = new System.Drawing.Point(109, 508);
+            this.phase_6.Name = "phase_6";
+            this.phase_6.Size = new System.Drawing.Size(14, 13);
+            this.phase_6.TabIndex = 17;
+            this.phase_6.TabStop = true;
+            this.phase_6.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // phase_7
             // 
-            this.radioButton6.AutoCheck = false;
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(129, 508);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(14, 13);
-            this.radioButton6.TabIndex = 18;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.phase_7.AutoCheck = false;
+            this.phase_7.AutoSize = true;
+            this.phase_7.Location = new System.Drawing.Point(129, 508);
+            this.phase_7.Name = "phase_7";
+            this.phase_7.Size = new System.Drawing.Size(14, 13);
+            this.phase_7.TabIndex = 18;
+            this.phase_7.TabStop = true;
+            this.phase_7.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // phase_8
             // 
-            this.radioButton7.AutoCheck = false;
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(149, 508);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(14, 13);
-            this.radioButton7.TabIndex = 19;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.phase_8.AutoCheck = false;
+            this.phase_8.AutoSize = true;
+            this.phase_8.Location = new System.Drawing.Point(149, 508);
+            this.phase_8.Name = "phase_8";
+            this.phase_8.Size = new System.Drawing.Size(14, 13);
+            this.phase_8.TabIndex = 19;
+            this.phase_8.TabStop = true;
+            this.phase_8.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -265,20 +261,30 @@
             this.lb_log.Size = new System.Drawing.Size(763, 173);
             this.lb_log.TabIndex = 21;
             // 
+            // lv_devices
+            // 
+            this.lv_devices.HideSelection = false;
+            this.lv_devices.Location = new System.Drawing.Point(16, 30);
+            this.lv_devices.Name = "lv_devices";
+            this.lv_devices.Size = new System.Drawing.Size(664, 217);
+            this.lv_devices.TabIndex = 22;
+            this.lv_devices.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 748);
+            this.Controls.Add(this.lv_devices);
             this.Controls.Add(this.lb_log);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.radioButton7);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.phase_8);
+            this.Controls.Add(this.phase_7);
+            this.Controls.Add(this.phase_6);
+            this.Controls.Add(this.phase_5);
+            this.Controls.Add(this.phase_4);
+            this.Controls.Add(this.phase_3);
+            this.Controls.Add(this.phase_2);
             this.Controls.Add(this.phase_1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lb_sensors);
@@ -290,11 +296,9 @@
             this.Controls.Add(this.delete_button);
             this.Controls.Add(this.edit_button);
             this.Controls.Add(this.add_button);
-            this.Controls.Add(this.dgv_devices);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_devices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,7 +307,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_devices;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.Button edit_button;
         private System.Windows.Forms.Button delete_button;
@@ -315,15 +318,16 @@
         private System.Windows.Forms.ListBox lb_sensors;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton phase_1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton phase_2;
+        private System.Windows.Forms.RadioButton phase_3;
+        private System.Windows.Forms.RadioButton phase_4;
+        private System.Windows.Forms.RadioButton phase_5;
+        private System.Windows.Forms.RadioButton phase_6;
+        private System.Windows.Forms.RadioButton phase_7;
+        private System.Windows.Forms.RadioButton phase_8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lb_log;
+        private System.Windows.Forms.ListView lv_devices;
     }
 }
 
