@@ -7,3 +7,4 @@ C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadat
 C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.csproj.CoreCompileInputs.cache
 C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.exe
 C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.pdb
+C:\Users\Filip\source\repos\nybble_zadatak\nybble_zadatak\obj\Debug\nybble_zadatak.Form1.resources
