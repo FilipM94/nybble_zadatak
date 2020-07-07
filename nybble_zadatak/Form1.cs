@@ -51,7 +51,8 @@ namespace nybble_zadatak
         {
             curr_device_id = "";
             DeviceForm deviceForm = new DeviceForm();
-            deviceForm.Show();
+            deviceForm.ShowDialog();
+            refreshDevices();
         }
 
         private void edit_button_Click(object sender, EventArgs e)
